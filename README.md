@@ -27,8 +27,8 @@ Mocked registration service for local testing.
 
 Home
 
-A list of images is displayed, fetched from the Pixabay API (with pagination support).
-Each row displays the image thumbnail and the name of the user who uploaded the image.
+- A list of images is displayed, fetched from the Pixabay API (with pagination support).
+- Each row displays the image thumbnail and the name of the user who uploaded the image.
 Tapping on a row navigates the user to the image details page.
 Image Detail
 The image details page is divided into two sections:
