@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.loginpixabay.ui.viewmodel.HomeViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".ui.details.ImageDetailFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                app:image_url="@{viewModel.imageDetail.previewURL}" />
+
+            <TextView
+                android:id="@+id/imageSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Image Size `.concat(String.valueOf(viewModel.imageDetail.imageSize))}" />
+
+            <TextView
+                android:id="@+id/imageType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Image Type `.concat(viewModel.imageDetail.type)}" />
+
+            <TextView
+                android:id="@+id/imageTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Image Tags `.concat(viewModel.imageDetail.tags)}" />
+
+            <TextView
+                android:id="@+id/imageInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Image User Info &amp; Social status"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`User Name `.concat(viewModel.imageDetail.user)}" />
+
+            <TextView
+                android:id="@+id/viewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Views `.concat(String.valueOf(viewModel.imageDetail.views))}" />
+
+            <TextView
+                android:id="@+id/likeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Likes `.concat(String.valueOf(viewModel.imageDetail.likes))}" />
+
+            <TextView
+                android:id="@+id/commentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Comments `.concat(String.valueOf(viewModel.imageDetail.comments))}" />
+
+            <TextView
+                android:id="@+id/favoriteCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Favourites `.concat(String.valueOf(viewModel.imageDetail.favorites))}" />
+
+            <TextView
+                android:id="@+id/downloadCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Downloads `.concat(String.valueOf(viewModel.imageDetail.downloads))}" />
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
