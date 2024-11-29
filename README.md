@@ -3,8 +3,11 @@ A sample app for getting images from pixabay
 This project is an Android application developed using Kotlin and follows the MVVM architecture pattern. It allows users to register, login, and view images retrieved from the Pixabay API. The app uses modern Android development practices including Coroutines, LiveData, Retrofit, Dependency Injection, and XML Data Binding for the UI.
 
 Username: test@example.com password : password
+
 #Features
+
 Login
+
 Email and Password fields with inline validation.
 The email must be valid.
 The password must be between 6 and 12 characters.
@@ -23,6 +26,7 @@ Error messages are shown inline for each field.
 Mocked registration service for local testing.
 
 Home
+
 A list of images is displayed, fetched from the Pixabay API (with pagination support).
 Each row displays the image thumbnail and the name of the user who uploaded the image.
 Tapping on a row navigates the user to the image details page.
